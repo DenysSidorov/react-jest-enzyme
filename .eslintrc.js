@@ -40,5 +40,13 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": OFF,
     "jsx-a11y/click-events-have-key-events": OFF,
     "jsx-a11y/alt-text": OFF,
+
+    // TEMP RULES
+    "no-use-before-define": OFF,
+    "prefer-destructuring": OFF,
+    "global-require": OFF,
+    "import/no-unresolved": OFF,
+    "react/prop-types": OFF,
+    "import/no-extraneous-dependencies": OFF
   }
 };
