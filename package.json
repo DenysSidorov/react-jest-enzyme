@@ -9,7 +9,7 @@
     "eslint": "eslint src/**/*.js",
     "eslint-fix": "eslint src/**/*.js --fix",
     "prettier": "prettier --write src/**/*.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Denys Sidorov",
   "license": "ISC",

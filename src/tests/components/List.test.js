@@ -16,16 +16,17 @@ describe('List tests', () => {
     // Expect the wrapper object to be defined
     expect(wrapper.find('.list-items')).toBeDefined();
     expect(wrapper.find('.item')).toHaveLength(items.length);
+    expect(items.length).toBe(3);
   });
-});
 
-it('renders list-items static', () => {
-  const items = ['one', 'two', 'three'];
-  const wrapper = render(<List items={items} />);
-  wrapper.addClass('foo');
-  // Expect the wrapper object to be defined
-  expect(wrapper.find('.list-items')).toBeDefined();
-  expect(wrapper.find('.item')).toHaveLength(items.length);
+  it('renders list-items static', () => {
+    const items = ['one', 'two', 'three'];
+    const wrapper = render(<List items={items} />);
+    wrapper.addClass('foo');
+    // Expect the wrapper object to be defined
+    expect(wrapper.find('.list-items')).toBeDefined();
+    expect(wrapper.find('.item')).toHaveLength(items.length);
+  });
 });
 
 describe('List tests', () => {
@@ -44,4 +45,22 @@ describe('List tests', () => {
     // Expect the child of the first item to be an array
     expect(wrapper.find('.empty-message')).toBeDefined();
   });
+});
+
+test('null', () => {
+  const n = null;
+  expect(n).toBeNull();
+  expect(n).toBeDefined();
+  expect(n).not.toBeUndefined();
+  expect(n).not.toBeTruthy();
+  expect(n).toBeFalsy();
+});
+
+test('zero', () => {
+  const z = 0;
+  expect(z).not.toBeNull();
+  expect(z).toBeDefined();
+  expect(z).not.toBeUndefined();
+  expect(z).not.toBeTruthy();
+  expect(z).toBeFalsy();
 });
